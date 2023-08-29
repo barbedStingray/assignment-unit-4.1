@@ -53,38 +53,33 @@ console.log(isPositive(-1));
 console.log(isPositive(0));
 
 
-
-
-
-
-
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-  return (array.indexOf(array.length - 1));
+  return array[array.length - 1];
 }
 
+let myArray = ['cheese', 'crust', 'sausage', 'tamatoSauce']
 
-
-
-
-
+console.log( getLast(myArray) );
 
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find(value, array) {
-  for(let i = 0; i < array.length; i++){
-    if( array[i] = value ){
-      return true;
-    }//end of true
-  }// end of loop
-  return false;
-} // end of function
+  let x = 0;
+  while( x < array.length ){
+    if( value === array[x]){
+     return true
+  }// return true
+  x++;
+}// end loop
+return false;
+}// end function
 
-
-
+console.log( find('sausage', myArray) );
 
 
 
@@ -96,24 +91,46 @@ function find(value, array) {
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+    if(letter === string[0]){
+      return true;
+    }
+    return false;
 }
 
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
+function sumAll(arr) {
   let sum = 0;
   // TODO: loop to add items
-
+  for(let i = 0; i < arr.length; i++){
+    sum += arr[i];
+  }
   // TODO: return the sum
+  return sum;
 }
+let numArray = [3, 6, 9, 2, 4,];
+
+console.log( sumAll(numArray) );
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
+function allPositive(arr) {
+    for(let x = 0; x < arr.length; x++){
+      if( arr[x] > 0 ){
+        allNewArray.push(arr[x]);
+      }// end positive if
+    }// end for loop
+} // end function
 
-}
+let inputArray = [3, 5, -2, 7, -1, 8, -5];
+let allNewArray = [];
+
+
+allPositive(inputArray);
+
+console.log( inputArray );
+console.log( allNewArray );
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
