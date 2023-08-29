@@ -77,7 +77,7 @@ function getLast(array) {
 function find(value, array) {
   for(let i = 0; i < array.length; i++){
     if( array[i] = value ){
-      return true
+      return true;
     }//end of true
   }// end of loop
   return false;
