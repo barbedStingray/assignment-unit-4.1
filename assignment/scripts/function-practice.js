@@ -97,6 +97,10 @@ function isFirstLetter(letter, string) {
     return false;
 }
 
+console.log( 'first letter' + isFirstLetter('b', 'benrehmann'));
+console.log( isFirstLetter('z', 'benrehmann'));
+
+
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(arr) {
@@ -112,25 +116,29 @@ let numArray = [3, 6, 9, 2, 4,];
 
 console.log( sumAll(numArray) );
 
+
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function allPositive(arr) {
+    let allNewArray = [];
     for(let x = 0; x < arr.length; x++){
       if( arr[x] > 0 ){
         allNewArray.push(arr[x]);
       }// end positive if
     }// end for loop
+    return allNewArray;
 } // end function
 
-let inputArray = [3, 5, -2, 7, -1, 8, -5];
-let allNewArray = [];
+let inputArray = [-3, -5, -2, 7, -1, -8, -5];
 
 
-allPositive(inputArray);
+
+
 
 console.log( inputArray );
-console.log( allNewArray );
+console.log( allPositive(inputArray) );
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
